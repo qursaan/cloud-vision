@@ -5,7 +5,7 @@ all: deploy
 
 .PHONY: build
 build:
-	docker build -t gcr.io/$(GCLOUD_PROJECT)/awwvision-webapp .
+	gcloud builds submit -t gcr.io/$(GCLOUD_PROJECT)/awwvision-webapp .
 
 .PHONY: push
 push: build
